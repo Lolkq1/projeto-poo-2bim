@@ -1,5 +1,4 @@
 class drone {
-    static drones=[];
     // a capacidade é em kg.
     // true indica disponível, false indica indisponível.
     constructor(id, capacidade, status) {
@@ -30,7 +29,6 @@ class drone {
 }
 
 class pedido {
-    static pedidos = []
     constructor(id, descricao, destino, status) {
         if (Number.isNaN(id) || !(status === true || status === false)) {
             console.log('dados inválidos')
@@ -77,17 +75,26 @@ class entrega {
         this.#ID_pedido = ID_pedido
         this.#status = status
     }
-    changeStatus() {
-        this.#status = !this.#status
-    }
-    getStatus() {
-        return this.#status
-    }
 }
-
 class Controlador {
-    coordenarEntrega(drone, pedido, status) {
-        let a = new entrega(drone, pedido, status)
-        
+    static drones = []
+    static pedidos = []
+    static entregas = []
+    cadastroDrone(id, capacidade){
+        let newDrone = new drone(id, capacidade)
+        drones.push(newDrone)
     }
+    registroPedido(id, descricao, destino){
+        let newPedido = new pedido(id, descricao, destino)
+        pedidos.push(newPedido)
+    }
+    inicarEntrega(entrega){
+        entrega.drone.#status = false
+        entrega.entrega.status = 'A caminho'
+    }
+    finalizarEntrega(entrega){
+        entrega.drone.#status = true
+        entrega.entrega.status = 'Entregue'
+    }
+
 }
