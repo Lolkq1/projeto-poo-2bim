@@ -1,0 +1,32 @@
+import drone from './classes/drone';
+import controladorDrone from './controladores/controladorDrone'
+const prompt = require('prompt-sync');
+
+
+function sistemaDrone(){
+    do{
+        console.log("1- CADASTRO DE DRONE\n2- ENCONTRAR DRONE\n3 - SAIR")
+        let opcao = prompt("Escolha uma opcão:")
+        
+        switch(opcao){
+            case 1:
+                console.log("CADASTRO DE DRONE:")
+                let idDrone = parseInt(prompt("ID: "))
+                let capacidade = parseFloat(prompt("Capacidade: "))
+                let status = false    
+                controladorDrone.registrar(idDrone, capacidade, status)
+            
+            case 2:
+                console.log("ENCONTRAR DRONE:")
+                let idDrone = parseInt(prompt("Informe o id do drone: "))
+                controladorDrone.encontrarDrone(encontraId)
+
+            case 3:
+                break
+            default:
+                console.log("Opção inválida")
+            }
+    } while(opcao != 3)
+}
+
+module.exports = sistemaDrone
