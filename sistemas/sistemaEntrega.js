@@ -17,7 +17,7 @@ function sistemaEntrega(){
             console.log('criando nova entrega...')
             let id_drone = parseInt(prompt('qual o id do drone'))
             let id_pedido = parseInt(prompt('qual o id do pedido'))
-            let status = prompt('qual o status do ')
+            let status = prompt('qual o status')
             let novaEntrega = new Entregaclasse(id_drone, id_pedido, status)
             controladorEntrega.entregas.push(novaEntrega)
             console.log('entrega criaada')
