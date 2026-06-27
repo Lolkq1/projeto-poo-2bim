@@ -10,10 +10,10 @@ function sistemaDrone(){
         switch(opcao){
             case 1:
                 console.log("CADASTRO DE DRONE:")
-                let idDrone = parseInt(prompt("ID: "))
+                let idDrone = () =>{return controladorDrone.drones.length + 1}
                 let capacidade = parseFloat(prompt("Capacidade: "))
                 let status = false    
-                controladorDrone.registrar(idDrone, capacidade, status)
+                controladorDrone.registrar(idDrone(), capacidade, status)
             
             case 2:
                 console.log("ENCONTRAR DRONE:")
