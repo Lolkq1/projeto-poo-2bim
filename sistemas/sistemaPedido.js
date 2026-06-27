@@ -13,11 +13,11 @@ function sistemaPedido(){
         switch(opcao){
             case 1:
                 console.log("CADASTRO DE PEDIDO:")
-                let idPedido = "alguma coisa ai que depois eu conserto"
+                let idPedido = ()=>{return controladorPedido.pedidos.length + 1}
                 let descricao = prompt("Descrição: ")
                 let destino = prompt("Destino: ")
                 let status = false    
-                controladorPedido.registrarPedido(idPedido, descricao, destino, status)
+                controladorPedido.registrarPedido(idPedido(), descricao, destino, status)
             
             case 2:
                 console.log("ENCONTRAR PEDIDO:")
