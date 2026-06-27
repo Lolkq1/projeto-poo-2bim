@@ -20,7 +20,7 @@ function sistemaDrone(){
                 let idDrone2 = parseInt(prompt("Informe o id do drone: "))
                 let droneEnc = controladorDrone.encontrarDrone(idDrone2)
                 if(!droneEnc){
-                    return "Drone não encontrado!"
+                    return console.log("Drone não encontrado!")
                 }
                 console.log(`ID: ${droneEnc.getId()}. Capacidade: ${droneEnc.getCapacidade()}. Status: ${droneEnc.getStatus()}`)
 

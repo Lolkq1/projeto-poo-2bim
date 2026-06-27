@@ -15,6 +15,14 @@ class controladorPedido {
         this.drones.push(pedido2)
         return pedido2;
     }
+    encontrarPedido(id){
+        for(x in peiddos){
+            if(x.getId() === id){
+                return x
+            }
+            return false
+        }
+    }
 
 }
 

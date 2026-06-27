@@ -25,7 +25,7 @@ function sistemaPedido(){
                 let idPedido2 = parseInt(prompt("Informe o id do drone: "))
                 let pedidoEnc = controladorDrone.encontrarPedido(idPedido2)
                 if(!pedidoEnc){
-                    return "Pedido não encontrado!"
+                    return console.log("Pedido não encontrado!")
                 }
                 console.log(`ID: ${pedidoEnc.getId()}. Capacidade: ${pedidoEnc.getCapacidade()}. Status: ${pedidoEnc.getStatus()}`)
 
