@@ -1,11 +1,10 @@
 import controladorPedido from "../controladores/controladorPedido";
 const prompt = require("prompt-sync");
 
-// Lembrar depois de adicionar um id fixo a drones e pedido
+// Lembrar depois de adicionar um id fixo a drones e pedido 
 // lembrar deposi de adicionar carga como atributo do pedido
-// Adicionar uma função EncontrarPedido em controlador de entrega
 
-//
+
 function sistemaPedido(){
     do {
         console.log("1- CADASTRO DE PEDIDO\n2- ENCONTRAR PEDIDO\n3 - SAIR")

@@ -16,7 +16,7 @@ class controladorPedido {
         return pedido2;
     }
     encontrarPedido(id){
-        for(x in peiddos){
+        for(x in pedidos){
             if(x.getId() === id){
                 return x
             }
