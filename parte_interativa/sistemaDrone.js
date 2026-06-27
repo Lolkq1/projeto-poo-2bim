@@ -1,4 +1,3 @@
-import drone from '../classes/drone';
 import controladorDrone from '../controladores/controladorDrone'
 const prompt = require('prompt-sync');
 
