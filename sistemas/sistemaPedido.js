@@ -1,6 +1,4 @@
 import controladorPedido from "../controladores/controladorPedido";
-const prompt = require("prompt-sync");
-
 function sistemaPedido(){
     do {
         console.log("1- CADASTRO DE PEDIDO\n2- ENCONTRAR PEDIDO\n3 - MODiFICAR DESCRIÇÃO\n4-SAIR")
@@ -12,8 +10,9 @@ function sistemaPedido(){
                 let idPedido = ()=>{return controladorPedido.pedidos.length + 1}
                 let descricao = prompt("Descrição: ")
                 let destino = prompt("Destino: ")
-                let status = false    
-                controladorPedido.registrarPedido(idPedido(), descricao, destino, status)
+                let status = true    
+                let carga = parseFloat(prompt("Carga: "))
+                controladorPedido.registrarPedido(idPedido(), descricao, destino, status, carga)
             
             case 2:
                 console.log("ENCONTRAR PEDIDO:")
