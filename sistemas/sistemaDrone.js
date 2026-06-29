@@ -14,7 +14,6 @@ function sistemaDrone(){
                 let capacidade = parseFloat(prompt("Capacidade: "))
                 let status = false    
                 controladorDrone.registrar(idDrone(), capacidade, status)
-            
             case 2:
                 console.log("ENCONTRAR DRONE:")
                 let idDrone2 = parseInt(prompt("Informe o id do drone: "))

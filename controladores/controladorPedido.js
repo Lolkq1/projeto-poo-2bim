@@ -8,7 +8,7 @@ class controladorPedido {
     registrarPedido(id, descricao, destino, status, capacidade) {
         for (x of this.pedidos) {
             if (x.getId() === id) {
-                return false
+                return console.log("Existe um pedido com esse ID.")
             }
         }
         let pedido2 = new pedido(id, descricao, destino, status, capacidade)
