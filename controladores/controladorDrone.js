@@ -22,7 +22,7 @@ class controladorDrone {
         }
         for (x of this.drones) {
             if (x.getId() === id) {
-                return console.log("Há um drone com esse id.")
+                return false
             }
         }
         let drone2 = new drone(id, capacidade, status)
