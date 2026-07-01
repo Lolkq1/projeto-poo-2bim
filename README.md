@@ -60,5 +60,7 @@ O ecossistema de arquivos do repositório está organizado da seguinte forma:
     ├── sistemaEntrega.js
     └── sistemaPedido.js
 
-<img width="1170" height="677" alt="image" src="https://github.com/user-attachments/assets/65e9704e-958d-4c12-b7b8-7ba2f81db98e" />
+```
+<img width="1170" height="677" alt="image" src="https://github.com/user-attachments/assets/4fd4607d-46c7-4e51-ba16-497134ddc56f" />
+
 
