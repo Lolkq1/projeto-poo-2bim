@@ -3,6 +3,7 @@ class pedido {
     #descricao;
     #destino;
     #status;
+    #capacidade;
     constructor(id, descricao, destino, status, capacidade) {
         this.#id = id;
         this.#descricao = descricao;
@@ -28,6 +29,12 @@ class pedido {
     setStatus(status) {
         this.#status = status
     }
+    setDestino(destino) {
+        this.#destino = destino
+    }
+    getDestino() {
+        return this.#destino
+    }
 }
 
-module.exports = pedido
+export default pedido

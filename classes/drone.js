@@ -21,4 +21,4 @@ class drone {
     }
 }
 
-module.exports = drone
+export default drone

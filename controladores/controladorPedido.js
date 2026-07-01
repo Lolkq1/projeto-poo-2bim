@@ -1,12 +1,11 @@
-const pedido = require("../classes/pedido");
+import pedido from '../classes/pedido.js'
 
 class controladorPedido {
-    pedidos = []
     constructor() {
-
+        this.pedidos = []
     }
     registrarPedido(id, descricao, destino, status, capacidade) {
-        for (x of this.pedidos) {
+        for (let x of this.pedidos) {
             if (x.getId() === id) {
                 return false
             }
@@ -16,7 +15,7 @@ class controladorPedido {
         return pedido2;
     }
     encontrarPedido(id){
-        for(x in pedidos){
+        for(let x of this.pedidos){
             if(x.getId() === id){
                 return x
             }
@@ -26,4 +25,4 @@ class controladorPedido {
 
 }
 
-module.exports = controladorPedido
+export default controladorPedido

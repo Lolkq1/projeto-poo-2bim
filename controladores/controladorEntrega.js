@@ -1,19 +1,25 @@
-const entrega = require('../classes/entrega')
+import entrega from '../classes/entrega.js'
 
 class controladorEntrega {
-   entregas = []
-   constructor() {}
+   constructor() {
+        this.entregas = []
+   }
+
+   criarEntrega(id_pedido, id_drone, status) {
+        let c = new entrega(id_pedido, id_drone, status)
+        this.entregas.push(c)
+        return c
+   }
 
    encontrarEntrega(id_pedido) {
-    for (x of entregas) {
+    for (let x of this.entregas) {
         if (x.getIDPedido() === id_pedido) {
             return x
         }
     }
-    
     return false
    }
    
 }
 
-module.exports = controladorEntrega
+export default controladorEntrega

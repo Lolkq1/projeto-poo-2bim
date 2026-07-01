@@ -1,0 +1,23 @@
+{
+  "name": "projeto-poo-2bim",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/lolkq1/projeto-poo-2bim#readme",
+  "bugs": {
+    "url": "https://github.com/lolkq1/projeto-poo-2bim/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolkq1/projeto-poo-2bim.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}

@@ -25,4 +25,4 @@ class entrega {
     }
 }
 
-module.exports = entrega
+export default entrega

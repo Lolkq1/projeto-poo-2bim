@@ -6,11 +6,13 @@ atualizar registro de entrega (implementando)
 
 */
 
-const entrega = require("../classes/entrega")
-
-let controladorEntrega = new require('./controladorEntrega')()
-let controladorPedido = new require('./controladorPedido')()
-let controladorDrone = new require('./controladorDrone')()
+import entrega from "../classes/entrega.js"
+import conentrega from './controladorEntrega.js'
+import conpedido from './controladorPedido.js'
+import condrone from './controladorDrone.js'
+let controladorEntrega = new conentrega()
+let controladorPedido = new conpedido()
+let controladorDrone = new condrone()
 
 controladorEntrega.finalizarEntrega = (id_pedido) => {
         let a = this.encontrarEntrega(id_pedido)
@@ -22,16 +24,16 @@ controladorEntrega.finalizarEntrega = (id_pedido) => {
 controladorEntrega.registrarEntrega = (id_drone, id_pedido, status) => {
     let a = false
     let b = false
-    let drone = undefined
-    let pedido = undefined
-    for (x of controladorPedido.pedidos) {
-        if (x.getId() === id_pedido && x.getStatus()) {
+    let drone
+    let pedido
+    for (let x of controladorPedido.pedidos) {
+        if (x.getId() === id_pedido && x.getStatus() !== "Finalizado") {
             a = true
             pedido = x
         }
     }
-    for (x of controladorDrone.drones) {
-        if (x.getId() === id_drone && x.getStatus() === false) { // verificação se o drone existe e se está liberado
+    for (let x of controladorDrone.drones) {
+        if (x.getId() === id_drone && !x.getStatus()) { // verificação se o drone existe e se está liberado
             b = true
             drone = x
         }
@@ -47,17 +49,15 @@ controladorEntrega.registrarEntrega = (id_drone, id_pedido, status) => {
     }
     
 
-    for (x of controladorEntrega.entregas) {
-        if (x.getIDDrone() === id_drone || x.getIDPedido() === id_pedido) {
+    for (let x of controladorEntrega.entregas) {
+        if ((x.getIDDrone() === id_drone || x.getIDPedido() === id_pedido) && x.getStatus() !== "Finalizada") {
             return false
         }
     }
 
-    let c = new entrega(id_drone, id_pedido, status)
+    let c = controladorEntrega.criarEntrega(id_pedido, id_drone, status)
     return c
-
 }
 
-module.exports = {
-    controladorDrone, controladorEntrega, controladorPedido
-}
+
+export {controladorDrone, controladorEntrega, controladorPedido}

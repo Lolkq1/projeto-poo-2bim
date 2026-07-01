@@ -1,13 +1,12 @@
-const drone = require('../classes/drone')
+import drone from '../classes/drone.js'
 
 class controladorDrone {
-    drones = []
     constructor() {
-
+        this.drones = []
     }
 
     encontrarDrone(id) {
-        for (x of drones) {
+        for (let x of this.drones) {
             if (x.getId() === id) {
                 return x
             }
@@ -19,7 +18,7 @@ class controladorDrone {
         if (!(status === true || status === false)) {
             return false
         }
-        for (x of this.drones) {
+        for (let x of this.drones) {
             if (x.getId() === id) {
                 return false
             }
@@ -30,4 +29,4 @@ class controladorDrone {
     }
 }
 
-module.exports = controladorDrone
+export default controladorDrone
