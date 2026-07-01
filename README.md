@@ -32,6 +32,8 @@ Todas as entidades de dados utilizam o modificador # nativo do JavaScript modern
 A inteligência do sistema reside na camada de controladores, com destaque para a integração em controladorEntrega2.js:
 * Barreira de Carga: O sistema impede que uma entrega seja registrada se o peso do pedido ultrapassar o limite suportado pelo drone.
 * Sincronização de Estados: Ao invocar a finalização de uma entrega, o sistema atualiza o status de transporte do pacote e aciona o changeStatus() do drone, devolvendo-o à frota como disponível.
+<img width="1170" height="677" alt="image" src="https://github.com/user-attachments/assets/aa200d3e-2d81-48f7-a855-b63fa795b321" />
+
 
 ### 3. Interface de Terminal Dinâmica (CLI)
 A interação humana é gerenciada de forma segmentada através de submenus que utilizam a biblioteca prompt-sync, permitindo manipulação de dados em tempo real e tratamento de erros visuais caso alguma validação de negócio falhe.
