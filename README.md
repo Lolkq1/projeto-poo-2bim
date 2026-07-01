@@ -32,7 +32,7 @@ Todas as entidades de dados utilizam o modificador # nativo do JavaScript modern
 A inteligência do sistema reside na camada de controladores, com destaque para a integração em controladorEntrega2.js:
 * Barreira de Carga: O sistema impede que uma entrega seja registrada se o peso do pedido ultrapassar o limite suportado pelo drone.
 * Sincronização de Estados: Ao invocar a finalização de uma entrega, o sistema atualiza o status de transporte do pacote e aciona o changeStatus() do drone, devolvendo-o à frota como disponível.
-<img width="1170" height="677" alt="image" src="https://github.com/user-attachments/assets/aa200d3e-2d81-48f7-a855-b63fa795b321" />
+
 
 
 ### 3. Interface de Terminal Dinâmica (CLI)
@@ -59,3 +59,6 @@ O ecossistema de arquivos do repositório está organizado da seguinte forma:
     ├── sistemaDrone.js
     ├── sistemaEntrega.js
     └── sistemaPedido.js
+
+<img width="1170" height="677" alt="image" src="https://github.com/user-attachments/assets/65e9704e-958d-4c12-b7b8-7ba2f81db98e" />
+
